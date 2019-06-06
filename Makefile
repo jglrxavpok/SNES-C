@@ -18,7 +18,6 @@ cfiles = src/*.c
 
 all: cleanC clean default
 
-buildc: SHELL:=/bin/bash
 buildc: cleanC $(cfiles)
 	mkdir buildc/
 	mkdir buildc/src
@@ -29,4 +28,4 @@ Play: buildc TestSNES.sfc
 	snes9x-gtk TestSNES.sfc
 
 cleanC:
-	rm -r buildc/
+	rm -rf buildc/

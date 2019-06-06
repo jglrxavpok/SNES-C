@@ -8,7 +8,6 @@ add_custom_target(MakeImage
 )
 
 add_custom_target(Play
-        COMMAND snes9x-gtk ${PROJECT_NAME}.sfc
+        COMMAND make clean && make Play
         WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
-        DEPENDS MakeImage
 )

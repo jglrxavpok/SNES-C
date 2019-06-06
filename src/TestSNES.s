@@ -19,7 +19,7 @@ Main:
 	jmp _MainC
 
 _MainASM:
-
+		pha
         ;libSFX calls Main after CPU/PPU registers, memory and interrupt handlers are initialized.
 
         ;Set color 0
@@ -55,7 +55,8 @@ _MainASM:
         VBL_on
 
 ; X of logo
-		lda 	#250
+	;	lda 	#250
+		pla
 		sta 	X_COORD
 ; Y of logo
 		lda 	#210
